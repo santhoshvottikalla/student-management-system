@@ -1,0 +1,638 @@
+/* =========================================
+   GENERAL
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f4f6f9;
+
+    color: #222;
+
+    min-height: 100vh;
+
+}
+
+
+/* =========================================
+   STUDENT FORM
+========================================= */
+
+.form-container {
+
+    width: 100%;
+
+    max-width: 600px;
+
+    margin: 50px auto;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 20px
+        rgba(0, 0, 0, 0.08);
+
+}
+
+
+.form-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+
+}
+
+
+.form-header h1 {
+
+    font-size: 28px;
+
+}
+
+
+.dashboard-link {
+
+    text-decoration: none;
+
+    color: #007bff;
+
+    font-weight: bold;
+
+}
+
+
+/* =========================================
+   FORM ELEMENTS
+========================================= */
+
+form {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+label {
+
+    margin-top: 15px;
+
+    margin-bottom: 7px;
+
+    font-weight: bold;
+
+}
+
+
+input,
+select {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    outline: none;
+
+}
+
+
+input:focus,
+select:focus {
+
+    border-color: #007bff;
+
+}
+
+
+/* =========================================
+   PRIMARY BUTTON
+========================================= */
+
+.primary-btn {
+
+    margin-top: 25px;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #007bff;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.primary-btn:hover {
+
+    background: #0056b3;
+
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+#message {
+
+    margin-top: 20px;
+
+    text-align: center;
+
+    font-weight: bold;
+
+}
+
+
+/* =========================================
+   DASHBOARD
+========================================= */
+
+.dashboard-container {
+
+    width: 95%;
+
+    max-width: 1200px;
+
+    margin: 40px auto;
+
+}
+
+
+.dashboard-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.dashboard-top h1 {
+
+    font-size: 32px;
+
+}
+
+
+.subtitle {
+
+    margin-top: 6px;
+
+    color: #777;
+
+}
+
+
+/* =========================================
+   ADD STUDENT BUTTON
+========================================= */
+
+.add-btn {
+
+    display: inline-block;
+
+    padding: 12px 18px;
+
+    background: #007bff;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+}
+
+
+.add-btn:hover {
+
+    background: #0056b3;
+
+}
+
+
+/* =========================================
+   STAT CARD
+========================================= */
+
+.stats-card {
+
+    background: white;
+
+    padding: 22px;
+
+    border-radius: 10px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 3px 12px
+        rgba(0, 0, 0, 0.06);
+
+}
+
+
+.stat-label {
+
+    display: block;
+
+    color: #777;
+
+    margin-bottom: 5px;
+
+}
+
+
+.stat-number {
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+}
+
+
+/* =========================================
+   SEARCH + FILTER
+========================================= */
+
+.filters {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+}
+
+
+#searchInput {
+
+    flex: 1;
+
+}
+
+
+#branchFilter {
+
+    width: 200px;
+
+    background: white;
+
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.table-container {
+
+    overflow-x: auto;
+
+    background: white;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 3px 12px
+        rgba(0, 0, 0, 0.06);
+
+}
+
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
+
+thead {
+
+    background: #007bff;
+
+    color: white;
+
+}
+
+
+th,
+td {
+
+    padding: 14px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #eee;
+
+}
+
+
+tbody tr:hover {
+
+    background: #f8f9fa;
+
+}
+
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.edit-btn,
+.delete-btn {
+
+    border: none;
+
+    padding: 7px 12px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    margin-right: 5px;
+
+}
+
+
+.edit-btn {
+
+    background: #ffc107;
+
+    color: #222;
+
+}
+
+
+.edit-btn:hover {
+
+    background: #e0a800;
+
+}
+
+
+.delete-btn {
+
+    background: #dc3545;
+
+    color: white;
+
+}
+
+
+.delete-btn:hover {
+
+    background: #b02a37;
+
+}
+
+
+/* =========================================
+   NO DATA
+========================================= */
+
+.no-data {
+
+    text-align: center;
+
+    padding: 30px;
+
+    color: #777;
+
+}
+
+
+/* =========================================
+   PAGINATION
+========================================= */
+
+#pagination {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 25px;
+
+    flex-wrap: wrap;
+
+}
+
+
+#pagination button {
+
+    padding: 8px 13px;
+
+    border: 1px solid #ccc;
+
+    background: white;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+}
+
+
+#pagination button:hover:not(:disabled) {
+
+    background: #f0f0f0;
+
+}
+
+
+#pagination button:disabled {
+
+    opacity: 0.5;
+
+    cursor: not-allowed;
+
+}
+
+
+#pagination .active-page {
+
+    background: #007bff;
+
+    color: white;
+
+    border-color: #007bff;
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .form-container {
+
+        width: 92%;
+
+        margin: 25px auto;
+
+        padding: 25px;
+
+    }
+
+
+    .dashboard-container {
+
+        width: 92%;
+
+        margin: 25px auto;
+
+    }
+
+
+    .dashboard-top {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+
+    .dashboard-top h1 {
+
+        font-size: 26px;
+
+    }
+
+
+    .filters {
+
+        flex-direction: column;
+
+    }
+
+
+    #branchFilter {
+
+        width: 100%;
+
+    }
+
+}
+
+/* =========================================
+   DASHBOARD ACTIONS
+========================================= */
+
+.dashboard-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.logout-btn {
+
+    padding: 12px 18px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #dc3545;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.logout-btn:hover {
+
+    background: #b02a37;
+
+}
+
+
+.login-register {
+
+    margin-top: 20px;
+
+    text-align: center;
+
+    color: #666;
+
+}
+
+
+.login-register a {
+
+    color: #007bff;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+}

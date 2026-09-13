@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- Header -->
+
+        <div class="dashboard-top">
+
+            <div>
+
+                <h1>
+                    Student Dashboard
+                </h1>
+
+                <p class="subtitle">
+                    Manage all registered students
+                </p>
+
+            </div>
+
+
+           <div class="dashboard-actions">
+
+                <a
+                    href="student.html"
+                    class="add-btn"
+                >
+                    + Add Student
+                </a>
+
+
+                <button
+                    id="logoutButton"
+                    class="logout-btn"
+                >
+                    Logout
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Statistics -->
+
+        <div class="stats-card">
+
+            <div>
+
+                <span class="stat-label">
+                    Total Students
+                </span>
+
+                <span
+                    id="studentCount"
+                    class="stat-number"
+                >
+                    0
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Search and Filter -->
+
+        <div class="filters">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search by name or email..."
+            >
+
+
+            <select id="branchFilter">
+
+                <option value="all">
+                    All Branches
+                </option>
+
+                <option value="CSE">
+                    CSE
+                </option>
+
+                <option value="ECE">
+                    ECE
+                </option>
+
+                <option value="EEE">
+                    EEE
+                </option>
+
+                <option value="ME">
+                    ME
+                </option>
+
+                <option value="CE">
+                    CE
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- Student Table -->
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>No.</th>
+
+                        <th>Name</th>
+
+                        <th>Email</th>
+
+                        <th>Age</th>
+
+                        <th>Branch</th>
+
+                        <th>Actions</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="studentTableBody">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <!-- Message -->
+
+        <p id="message"></p>
+
+
+        <!-- Pagination -->
+
+        <div id="pagination"></div>
+
+    </div>
+
+
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>
